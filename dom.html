@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="mybody">
+    <div>
+        <h1> DOM </h1>
+    </div>
+    <div>
+        <button id="btn1"> Click1 </button>
+        <button id="btn2">Click2</button>
+    </div>
+    <script>
+        const btnElem=document.getElementById('btn1')
+        // console.log(btnElem)
+        btnElem.addEventListener('click',(event)=>{
+            const newElem=document.createElement('h2')
+            newElem.innerText='created after click'
+            const bodyEle= document.getElementById('mybody')
+            bodyEle.appendChild(newElem)
+        })
+    </script>
+</body>
+</html>
